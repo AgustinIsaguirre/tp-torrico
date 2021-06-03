@@ -1,15 +1,16 @@
 let texto = [];
-let i=-1;
+let i=0;
 
     do{
         
-        i++;
+        
         texto[i] = window.prompt("Ingrese el texto que desee");     
+        i++;
         
     }
-    while(texto[i]!=null);
+    while(texto[i-1]!=null);
     
         
         let suma = texto.join("-");
 
-    console.log(suma);
+    alert(suma);

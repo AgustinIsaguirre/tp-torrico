@@ -1,5 +1,6 @@
 let nota1=undefined;
-let corte=undefined;   
+let corte=undefined;
+let verif;   
 do{    
         do{
         
@@ -7,26 +8,23 @@ do{
 
             nota1 = parseInt(nota1);
 
-            console.log(nota1);
+            verif=true;
+
+                if(isNaN(nota1)){
+                    verif=false
+                }
+
+                if(nota1<0 || nota1>10){
+
+                    alert("Debe Ingresar un número entre 0 y 10");
+
+                    verif=false;
+                }    
 
         }
 
-        while(isNaN(nota1));
+        while(verif===false);
 
-        if(nota1<0 || nota1>10){
-
-            alert("Debe Ingresar un número entre 0 y 10");
-        
-            do{
-
-                nota1 = window.prompt("Ingrese una nota del 0 al 10");
-            
-                nota1 = parseInt(nota1);
-            
-            }
-            
-            while(isNaN(nota1));
-        }
         
     switch(nota1){
 
